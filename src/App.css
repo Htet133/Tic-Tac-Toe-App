@@ -23,3 +23,25 @@
 .game-board {
   margin: 40px;
 }
+
+.status {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4CAF50; /* အစိမ်းရောင် */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #45a049; /* မောက်စ်တင်ရင် အရောင်နည်းနည်းရင့်သွားမယ် */
+}
