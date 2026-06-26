@@ -1,47 +1,126 @@
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
+.game-board {
+  width: min(420px, calc(100% - 32px));
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.start-form {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.start-form label {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.start-form input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+.scoreboard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.scoreboard div {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+  color: var(--text);
+}
+
+.scoreboard strong {
+  color: var(--text-h);
+  overflow-wrap: anywhere;
+}
+
+.status {
+  min-height: 28px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 34px;
-  height: 60px;
-  width: 60px;
+  color: var(--text-h);
+}
+
+.board {
+  display: grid;
+  gap: 0;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 72px;
+  height: 72px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
+  border: 1px solid #999;
+  background: #fff;
+  color: #08060d;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
   text-align: center;
   cursor: pointer;
 }
 
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
+.square:hover {
+  background: #f4f3ec;
 }
 
-.game-board {
-  margin: 40px;
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.status {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.restart-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #4CAF50; /* အစိမ်းရောင် */
-  color: white;
+.restart-button,
+.secondary-button {
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: bold;
   cursor: pointer;
 }
 
+.restart-button {
+  background-color: #2563eb;
+  color: white;
+}
+
 .restart-button:hover {
-  background-color: #45a049; /* မောက်စ်တင်ရင် အရောင်နည်းနည်းရင့်သွားမယ် */
+  background-color: #1d4ed8;
+}
+
+.secondary-button {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-h);
+}
+
+.secondary-button:hover {
+  background: var(--social-bg);
 }
